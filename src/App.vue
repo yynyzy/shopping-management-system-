@@ -16,6 +16,7 @@ export default {
 
 <style>
 /* 导入全局样式表 */
-@import './assets/css/global.css'
+@import './assets/css/global.css';
+
 
 </style>

@@ -41,10 +41,6 @@
 </template>
 
 <script>
-// import axios from "axios";
-// axios.defaults.baseURL = "http://127.0.0.1:8888/api/private/v1/";
-
-import { ElMessage } from "element-plus";
 
 export default {
   name: "Login",
@@ -83,8 +79,9 @@ export default {
         const { data: res } = await this.$axios.post("login", this.loginForm);
         if (res.meta.status !== 200) return this.$ElMessage.error("登陆失败!");
         this.$ElMessage.success("登陆成功");
+        // console.log(res);
 
-        console.log(res);
+        //储存token值
         window.sessionStorage.setItem("token", res.data.token);
         this.$router.push("/home")
       });
