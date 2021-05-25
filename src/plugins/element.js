@@ -22,7 +22,11 @@ import {
   ElTooltip,
   ElPagination,
   ElDialog,
-  ElMessageBox
+  ElMessageBox,
+  ElTag,
+  ElTree,
+  ElSelect,
+  ElOption,
 } from 'element-plus'
 
 import 'element-plus/lib/theme-chalk/index.css'
@@ -52,6 +56,10 @@ export default (app) => {
   app.use(ElTooltip)
   app.use(ElPagination)
   app.use(ElDialog)
+  app.use(ElTag)
+  app.use(ElTree)
+  app.use(ElSelect)
+  app.use(ElOption)
 
   app.config.globalProperties.$ElMessage = ElMessage
   app.config.globalProperties.$confirm =ElMessageBox.confirm
