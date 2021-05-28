@@ -27,10 +27,14 @@ import {
   ElTree,
   ElSelect,
   ElOption,
+  ElAlert,
+  ElCascader,
+  ElTabs,
+  ElTabPane
+  
 } from 'element-plus'
 
 import 'element-plus/lib/theme-chalk/index.css'
-
 
 
 export default (app) => {
@@ -60,6 +64,12 @@ export default (app) => {
   app.use(ElTree)
   app.use(ElSelect)
   app.use(ElOption)
+  app.use(ElAlert)
+  app.use(ElCascader)
+  app.use(ElTabs)
+  app.use(ElTabPane)
+  
+  
 
   app.config.globalProperties.$ElMessage = ElMessage
   app.config.globalProperties.$confirm =ElMessageBox.confirm
