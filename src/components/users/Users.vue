@@ -17,7 +17,8 @@
             v-model="queryInfo.query"         
             clearable="true"
             @clear="getUserList"
-          >       
+          >     
+           <template #append>  
               <el-button
                 icon="el-icon-search"
                 @click="
@@ -25,7 +26,7 @@
                   getUserList();
                 "
               ></el-button>
-            
+             </template>
           </el-input>
         </el-col>
         <el-col :span="4">
@@ -170,10 +171,14 @@
           <el-input v-model="editForm.email"></el-input>
         </el-form-item>
       </el-form>
+       <template #footer>
+   
+  
       <span class="dialog-footer">
         <el-button @click="editDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="editUserInfo">确 定</el-button>
       </span>
+      </template>
     </el-dialog>
   </div>
 

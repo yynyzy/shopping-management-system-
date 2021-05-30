@@ -11,8 +11,10 @@
       <el-col :span="8">
         <el-input 
         placeholder="请输入内容" v-model="queryInfo.query" clearable @clear="getGoodsLists">
+         <template #append>
           <el-button  icon="el-icon-search" @click="handleCurrentChange(1);getGoodsLists">          
           </el-button>
+          </template>
         </el-input>
       </el-col>
       <el-col :span="4">
@@ -79,7 +81,7 @@ export default {
         pagesize: "10",
       },
       goodsLists: [],
-      total: "",
+      total:"" ,
     };
   },
   created() {

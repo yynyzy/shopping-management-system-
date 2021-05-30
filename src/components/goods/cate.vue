@@ -34,7 +34,7 @@
           <el-tag size="mini" type="success" v-else-if="scope.row.cat_level == 0">二级</el-tag>
           <el-tag size="mini" type="warning" v-else>三级</el-tag>
       </el-table-column>
-    </el-table>
+    </el-table>-->
 
     <el-pagination
       @size-change="handleSizeChange"
@@ -44,7 +44,7 @@
         :page-size="queryInfo.pagesize"
       layout="total, sizes, prev, pager, next, jumper"
       :total="total">   -
-    </el-pagination> -->
+    </el-pagination> 
   </el-card>
 
   <!-- 分页 -->

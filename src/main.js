@@ -3,14 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import ElementPlus from './plugins/element'
-import ZkTable from 'vue-table-with-tree-grid'
 
 
-import VueQuillEditor from 'vue-quill-editor'
-
-import 'quill/dist/quill.core.css' // import styles
-import 'quill/dist/quill.snow.css' // for snow theme
-import 'quill/dist/quill.bubble.css' // for bubble theme
 
 import axios from "axios";
 axios.defaults.baseURL = "http://127.0.0.1:8888/api/private/v1/";
@@ -23,9 +17,6 @@ ElementPlus(app)
 // 全局注册axios
 app.config.globalProperties.$axios = axios
 
-
-// app.component('quilleditor', VueQuillEditor)
-app.use(VueQuillEditor)
 
 //全局注册时间过滤器
 app.config.globalProperties.$filters = {

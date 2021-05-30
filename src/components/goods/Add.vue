@@ -293,7 +293,6 @@ export default {
 
         const { data: res } = await this.$axios.post('goods',this.addForm)
       if(res.meta.status!== 201){
-        console.log(res);
         return this.$ElMessage.error("商品添加失败")}
       this.$ElMessage.success("添加成功")
       this.$router.push({path:"/goods"})
