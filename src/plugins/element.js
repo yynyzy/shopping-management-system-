@@ -30,7 +30,12 @@ import {
   ElAlert,
   ElCascader,
   ElTabs,
-  ElTabPane
+  ElTabPane,
+  ElSteps,
+  ElStep,
+  ElCheckboxGroup,
+  ElCheckbox,
+  ElUpload
   
 } from 'element-plus'
 
@@ -68,6 +73,11 @@ export default (app) => {
   app.use(ElCascader)
   app.use(ElTabs)
   app.use(ElTabPane)
+  app.use(ElSteps)
+  app.use(ElStep)
+  app.use(ElCheckboxGroup)
+  app.use(ElCheckbox)
+  app.use(ElUpload)
   
   
 

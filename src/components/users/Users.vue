@@ -14,12 +14,10 @@
         <el-col :span="8">
           <el-input
             placeholder="请输入内容"
-            v-model="queryInfo.query"
-            class="input-with-select"
+            v-model="queryInfo.query"         
             clearable="true"
             @clear="getUserList"
-          >
-            <template #append>
+          >       
               <el-button
                 icon="el-icon-search"
                 @click="
@@ -27,7 +25,7 @@
                   getUserList();
                 "
               ></el-button>
-            </template>
+            
           </el-input>
         </el-col>
         <el-col :span="4">
@@ -316,7 +314,6 @@ export default {
     },
     // 监听switch开关切换
     async userStateChange(userInfo) {
-      console.log(userInfo);
       const { data: res } = await this.$axios.put(
         `users/${userInfo.id}/state/${userInfo.mg_state}`
       );
