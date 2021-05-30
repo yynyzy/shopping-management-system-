@@ -128,6 +128,7 @@
 </template>
 
 <script>
+
 import cityData from "./citydata";
 export default {
   data() {
@@ -158,6 +159,7 @@ export default {
   created() {
     this.getOrderList();
   },
+ 
   methods: {
     async getOrderList() {
       const { data: res } = await this.$axios.get("orders", {
@@ -183,7 +185,7 @@ export default {
       this.$refs.addressFormRef.resetFields();
     },
   async  showProgress(){
-      const { data: res } = await this.$axios.get("/kuaidi/1106975712662")
+      const { data: res } = await this.$axios.get("")
       if(res.meta.status!=200) {
         return this.$ElMessage.error("获取物流进度失败")
       }
